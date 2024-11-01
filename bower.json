@@ -1,0 +1,22 @@
+{
+  "name": "wp-nice-topbar",
+  "version": "1.0.0",
+  "homepage": "https://github.com/duyngha/wp-nice-topbar",
+  "authors": [
+    "duyngha <duyngha@gmail.com>"
+  ],
+  "description": "packages for wp-nice-topbar project",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assist/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fontawesome": "~4.4.0",
+    "jquery-minicolors" : "~2.1.0"
+  }
+}

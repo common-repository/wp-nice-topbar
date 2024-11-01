@@ -1,0 +1,17 @@
+{
+	"require": {
+		"mobiledetect/mobiledetectlib": "^2.8",
+		"mailchimp/mailchimp": ">=2.0.6"
+	},
+	"autoload": {
+		"files": [
+			"src/functions.php"
+		],
+		"psr-4": {
+			"WPNT\\Constracts\\" : "src/constracts",
+			"WPNT\\Support\\"    : "src/support",
+			"WPNT\\Core\\"       : "src/core",
+			"WPNT\\Elements\\"   : "src/elements"
+		}
+	}
+}

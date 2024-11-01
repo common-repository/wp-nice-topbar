@@ -1,0 +1,519 @@
+/**
+ * Style for admin page
+ * @author Duy Nguyen
+ * @package wpnt
+ * 
+ */
+
+/***************************** FONTS ******************************************/
+/******************************************************************************/
+@font-face {
+    font-family: 'Proxima Nova Alt Regular';
+    src: url('../fonts/Mark Simonson - Proxima Nova Alt Regular.otf');
+}
+@font-face {
+    font-family: 'Proxima Nova Alt Thin';
+    src: url('../fonts/Mark Simonson - Proxima Nova Alt Thin.otf'); 
+}
+.wpnt-wrap {
+    font-family: 'Proxima Nova Alt Regular';
+}
+.wpnt-wrap::after, .wpnt-wrap::before {
+    clear: both;
+    content: "";
+    display: table;
+}
+ /* TABS STYLE */
+.wpnt-tabs {
+    background-color: #fff;
+    border-color: #e9eaed;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    height: 35px;
+    list-style: none;
+    margin: 0;
+    clear: both;
+}
+.wpnt-tabs > li {
+    display: inline-block;
+    float: left;
+    line-height: 35px;
+    padding: 0 20px;
+    height: 35px;
+    border-style: solid;
+    border-width: 0 1px 0 0;
+    /*border-color: #e9eaed;*/
+    border-color: transparent;
+    cursor: pointer;
+}
+.wpnt-tabs > li:hover {
+    /*background-color: #F6F7F9;*/
+    text-decoration: underline;
+}
+.wpnt-tab-active {
+    background-color: #fff;
+    position: relative;
+}
+.wpnt-tabs .wpnt-tab-active:hover {
+    background-color: #fff;
+}
+.wpnt-tabs > li > span {
+    color: #005B8A;
+    font-weight: bold;
+}
+.wpnt-tabs .wpnt-tab-active > span{
+    color: #343434;
+}
+.wpnt-tab-active span::after {
+    content: "";
+    background-image: url(../images/icons.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 17px;
+    height: 9px;
+    bottom: -1px;
+    background-position: -113px -220px;
+    background-size: 500px 284px;
+    left: 50%;
+    margin-left: -8px;
+}
+.wpnt-pane {
+    display: none;
+}
+.wpnt-pane.wpnt-pane-active {
+    display: block;
+}
+.wpnt-tab-inner {
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 20px;
+    border: 1px solid #e9eaed;
+}
+
+/* COMMON CSS */
+#wpnt_container {
+    float: left;
+    width: 70%;
+}
+.wpnt-inner {
+    padding: 0 20px;
+}
+.wpnt-header {
+    background-color: #afded6;
+    background-image: url(../images/spring-banner.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    border-color: #e9eaed;
+    border-style: solid;;
+    border-width: 0 1px 0 1px;
+}
+.wpnt-meta {
+    float: right;
+    line-height: 60px;
+    color: rgba(255,255,255,0.5);
+    font-size: 12px;
+}
+.wpnt-author-email {
+    color: rgba(255,255,255,0.5);
+}
+.wpnt-before-content {
+    position: absolute;
+    right: 5px;
+    top: 21px;
+}
+.wpnt-before-content > a {
+    color: #ffffff;
+    text-decoration: none;
+    padding-right: 10px;
+}
+.wpnt-logo img {
+    width: 40px;
+    margin-top: 10px;
+}
+.wpnt-icon {
+    padding-right: 10px;
+}
+.group-title h3 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+.tooltip-bar {
+    display: none;
+}
+.wpnt-after-content {
+    padding: 20px 0;
+}
+#wpnt_footer {
+    padding-top: 5px;
+    text-align: right;
+}
+#wpnt_version {
+    padding-right: 10px;
+}
+.saving-img {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 80px;
+    z-index: 99;
+    background-color: rgba(255,255,255,0.8);
+    width: 100%;
+    height: 100%;
+}
+.saving-img > img {
+    width: 30px;
+    left: 50%;
+    position: relative;
+    top: 50%;
+}
+.updated-box {
+    left: 42%;
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    z-index: 99;
+}
+.updated-box > img {
+    width: 100%;
+}
+#wpnt_body {
+    position: relative;
+}
+#wpnt_header {
+    height: 60px;
+}
+.wpnt-logo-text {
+    color: #fff;
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 60px;
+    text-transform: uppercase;
+}
+.fa.fa-question-circle.wpnt-icon-cursor {
+    color: #a0a0a0;
+}
+.wpnt-table th {
+    position: relative;
+}
+.tooltip-bar {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 3px;
+    color: #fff;
+    font-size: 11px;
+    padding: 5px;
+    position: absolute;
+    right: -200px;
+    top: 20px;
+    width: 100%;
+    z-index: 99;
+}
+.wpnt-error {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}
+.wpnt-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+}
+.wpnt-message {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+.wpnt-text-small {
+    font-size: smaller;
+    color: #9e9e9e;
+}
+.wpnt-slider #custom-handle {
+    background-image: url(../images/slider-control.png);
+    border: 0;
+    background-color: transparent;
+    width: 18px;
+    height: 18px;
+    top: -7px;
+}
+#slider {
+    height: 3px;
+}
+
+
+/** SIDEBAR **/
+.wpnt-sidebar {
+    float: left;
+    margin: 10px 0 0;
+    width: 27%;
+}
+.wpnt-widget {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #e9eaed;
+    padding: 20px;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+.wpnt-widget > h3 {
+    margin-top: 0;
+}
+
+/** FORM FIELDS **/
+.wpnt-new-section {
+    background-color: #fff;
+}
+.wpnt-settings-section {
+    background-color: #fff;
+}
+.wpnt-listing-section {
+    background-color: #fff;
+}
+.wpnt-content table {
+    margin: 0;
+    border: 0;
+}
+.wpnt-table select {
+    width: 200px;
+}
+.wpnt-table input[type="text"] {
+    width: 200px;
+}
+.wpnt-btn {
+    display: inline-block;
+    margin: 0;
+    border: 0;
+    border-style: solid;
+    border-color: #7f7f7f;
+    border-bottom-width: 0.315em;
+    padding: 10px;
+    font-size: 0.85em;
+    font-weight: 600;
+    letter-spacing: 0.065em;
+    line-height: 1.2;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff !important;
+    background-color: #9e9e9e;
+    border-radius: 0.45em;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+.wpnt-btn-small {
+    padding: 5px;
+    font-size: 10px;
+}
+.wpnt-btn:hover {
+    background-color: #016CA2;
+    border-color: #024e75;
+}
+.required {
+    color: #ed302e;
+}
+.wpnt-table fieldset label {
+    width: 10%;
+}
+.wpnt-table textarea {
+    height: 150px;
+    width: 100%;
+}
+#wpnt_btn_reset {
+    float: right;
+}
+.wpnt-options.color-picker.minicolors-input {
+    height: 28px;
+}
+#wpnt_single_remove {
+    float: right;
+    margin-left: 10px;
+}
+.newletter-subscribe-form input[type="email"] {
+    width: 100%;
+    margin-bottom: 15px;
+}
+.topbar-box {
+    width: 100%;
+    height: 30px;
+    border: 2px solid #ccc;
+    position: relative;
+    padding: 5px;
+    border-radius: 3px;
+}
+.components-box {
+    border: 2px dashed #ccc;
+    padding: 5px;
+    border-radius: 3px;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 30px;
+    position: relative;
+}
+.components-box::before {
+    content: "Drop here to remove a component";
+    color: #ccc;
+    position: absolute;
+    top: 10px;
+    left: 30%;
+}
+.topbar-component {
+    display: inline-block;
+    margin: 0 2px!important;
+    text-align: center;
+    cursor: move!important;
+    width: 24%;
+    z-index: 1;
+    position: relative;
+    background: linear-gradient(to top, #ECECEC, #F9F9F9) repeat scroll 0 0 #F1F1F1 !important;
+    border: 1px solid #DFDFDF !important;
+    height: 28px;
+    line-height: 29px;
+    border-radius: 2px;
+    float: left;
+}
+.topbar-box::before {
+    content: "Drop here to add a component.";
+    color: #ccc;
+    position: absolute;
+    top: 10px;
+    left: 30%;
+}
+.ui-slider-horizontal {
+    display: inline-block;
+    width: 35%;
+}
+.wpnt-table .wpnt-options.small-field {
+    width: 6%;
+    margin-left: 10px;
+}
+.wpnt-padding-5 {
+    padding: 5px;
+}
+.wpnt-mc-label {
+    color: #ff3700;
+    background-color: #ffa38c;
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 2px;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.5);
+    text-transform: lowercase;
+}
+.wpnt-connect {
+    color: #03a50b;
+    background-color: #86d689;
+}
+
+/*******************/
+/* Vertical tab */
+.wpnt-vertical-tab {
+    display: table;
+    width: 100%;
+    background: #fff;
+}
+.wpnt-vertical-tab ul {
+    margin: 0;
+    display: table;
+    width: 20%;
+    float: left;
+}
+.wpnt-vertical-tab ul li {
+    text-align: center;
+    padding: 5px 10px;
+    border-bottom: 1px solid #e9eaed;
+    margin: 0;
+    cursor: pointer;
+    background-color: #f4f4f4;
+}
+.wpnt-vertical-tab ul li:hover {
+    background-color: #fff;
+}
+.wpnt-vertical-tab .wpnt-panes {
+    width: 80%;
+    float: left;
+    border-left: 1px solid #e9eaed;
+    box-sizing: border-box;
+}
+.wpnt-vertical-tab .wpnt-tab-inner {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+.wpnt-vertical-tab .wpnt-tab-active {
+    background-color: #fff;
+}
+#wpnt_btn_connect {
+    font-size: 0.6em;
+    vertical-align: middle;
+}
+.wpnt-vote {
+    background-image: url(../images/like.png);
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-size: 100%;
+}
+.star {
+    text-decoration: none;
+}
+.wpnt-subscribe {
+    background-image: url('../images/subscribe.png');
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-size: 100%;
+}
+
+/*******************/
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 26px;
+    border-radius: 2px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    display:none;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 3px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 3px;
+}
+
+input:checked + .slider {
+    background-color: #005B8A;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #005B8A;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}

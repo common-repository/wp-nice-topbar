@@ -1,0 +1,106 @@
+.wpnt-topbar-inner {
+	height: 100%;
+	text-align: center;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.wpnt-component {
+	display: inline-block;
+	vertical-align: middle;
+}
+.close-icon {
+	z-index:1;
+	cursor: pointer;
+	font-size: 17px !important;
+	margin-right: 10px;
+	position: absolute;
+	text-align: center;
+	right: 0;
+	color: #fff;
+}
+.open-btn {
+    position: fixed;
+    right: 0;
+    color: #fff;
+    cursor: pointer;
+    z-index: 9999;
+}
+.open-btn.open-btn-top {
+    top: -40px;
+    border-top: 19px solid #333;
+    border-bottom: 19px solid transparent;
+    border-left: 19px solid transparent;
+    border-right: 19px solid #333;
+}
+.open-btn.open-btn-bottom {
+    bottom: -40px;
+    border-top: 19px solid transparent;
+    border-bottom: 19px solid #333;
+    border-left: 19px solid transparent;
+    border-right: 19px solid #333;
+}
+.open-icon {
+    position: absolute;
+    font-size: 11px;
+    left: 5px;
+}
+.open-btn-top .open-icon {
+    top: -11px;
+}
+.open-btn-bottom .open-icon {
+    top: 0;
+}
+.open-btn-top:hover {
+    transition: all 0.5s ease 0s;
+    border-top: 19px solid #595858;
+    border-bottom: 19px solid transparent;
+    border-left: 19px solid transparent;
+    border-right: 19px solid #595858;
+}
+.open-active,
+.close-active {
+    transition: all 0.5s ease 0s;
+}
+.open-btn-top.open-active {
+	top: 0;
+	
+}
+.open-btn-bottom.open-active {
+    bottom: 0;
+}
+
+/* ======================= Mailchimp Form =================================== */
+/* ===========================================================================*/
+.wpnt-topbar-box .wpnt-subscribe-form {
+    display: inline-block;
+}
+.wpnt-subscribe-form input[type="email"] {
+    border: 0;
+    margin: 0;
+    padding: 0 10px;
+    height: 30px;
+    border-radius: 0;
+    display: inline;
+    width: 200px;
+}
+.wpnt-subscribe-form input[placeholder] {
+    font-size: 12px;
+}
+.wpnt-subscribe-form button {
+    background-color: #333;
+    padding: 6px 10px;
+    color: #6190a2;
+    border: 2px solid #6190a2;
+    display: inline;
+    border-radius: 0;
+    font-weight: lighter;
+    width: 100px;
+    line-height: normal;
+    font-size: 12px;
+}
+#processing_img {
+    width: 10px;
+    display: none;
+}
+
